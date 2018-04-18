@@ -17,7 +17,7 @@ class Product
 	std::pair<int, int> xy;
 	
 public:
-	//Product(std::string name_, int seed_price, int fetus_price, std::string address_of_image, int num_stage) :name(name_), price_for_seed(seed_price), price_for_fetus(fetus_price), address(address_of_image), number_of_stages(num_stage){};
+	Product(std::string name_, int seed_price, int fetus_price, int x1,int y1,int x2,int y2, int num_stage) :name(name_), price_for_seed(seed_price), price_for_fetus(fetus_price), address1(x1,y1),address2(x2,y2), number_of_stages(num_stage){};
 	int Get_seed(){ return price_for_seed; };
 	int Get_fetus(){ return price_for_fetus; };
 	std::string Get_name(){ return name; };

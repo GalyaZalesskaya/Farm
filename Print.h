@@ -8,7 +8,7 @@ class Print
 {
 public:
 	Print();
-	void Begin_game(){};
+	int Begin_game();
 	~Print();
 };
 
