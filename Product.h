@@ -10,18 +10,19 @@ class Product
 	int current_stage = 1;
 	int lifespan = 5;
 	std::string name;
-	std::pair<int,int> address1;
-	std::pair<int, int> address2;
-	std::pair<int, int> curr_address1;
-	std::pair<int, int> curr_address2;
+	std::pair<int,int> address;
+	std::pair<int, int> size;
+	std::pair<int, int> curr_address;
+	std::pair<int, int> curr_size;
 	std::pair<int, int> xy;
 	
 public:
-	//Product(std::string name_, int seed_price, int fetus_price, std::string address_of_image, int num_stage) :name(name_), price_for_seed(seed_price), price_for_fetus(fetus_price), address(address_of_image), number_of_stages(num_stage){};
+	Product(std::string name_, int seed_price, int fetus_price, int x1,int y1,int x2,int y2) :name(name_), price_for_seed(seed_price), price_for_fetus(fetus_price), address(x1,y1),size(x2,y2){};
 	int Get_seed(){ return price_for_seed; };
 	int Get_fetus(){ return price_for_fetus; };
 	std::string Get_name(){ return name; };
-	//std::string Get_address(){ return address; };
+	std::pair<int,int> Get_address(){ return address; };
+	std::pair<int, int> Get_size(){ return size; };
 	int Get_num_stages(){ return number_of_stages; };
 	std::pair<int, int> Get_xy(){ return xy; };
 	void Set_xy(int x, int y){ xy.first = x; xy.second = y; };
